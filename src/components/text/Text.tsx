@@ -20,7 +20,7 @@ export default function TextM(props: TextProps) {
   const textStyle = StyleSheet.flatten<TextStyle>([props?.style]);
   const colors = useColor();
 
-  const color = props.color || textStyle.color || colors.primary;
+  const color = props.color || textStyle.color || 'black';
   const translation = useTranslation();
 
   const handleOnPress = () => {

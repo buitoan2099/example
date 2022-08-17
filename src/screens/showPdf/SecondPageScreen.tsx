@@ -8,6 +8,7 @@ import {vs} from 'src/commons/types';
 import createStyles from './styles';
 import {useColor, useDimension, useStyleSheet} from '@hooks';
 import {ColorType, DimensionType} from '@commons';
+import {HighlightText} from '@components/text/HighlightText';
 
 export const SecondScreen = () => {
   //   const viewModel = FirstViewModel.current;
@@ -23,6 +24,13 @@ export const SecondScreen = () => {
     return (
       <>
         <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text>
+        <HighlightText
+          text={'anh em ba 4 h anh em fki em'}
+          keysearch={'em'}
+          highlightColor={color.red}
+          textStyle={styles.titleStyle}
+          highlightStyle={styles.titleHighlightStyle}
+        />
         {/* <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text> */}
         {/* <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text>
         <View style={stylesSheet.containerView}>
@@ -86,10 +94,16 @@ const styles = StyleSheet.create({
     marginHorizontal: vs(16),
   },
   titleStyle: {
+    fontSize: vs(14),
+    fontWeight: '400',
+    color: 'black',
+    marginVertical: vs(8),
+  },
+  titleHighlightStyle: {
     fontSize: vs(16),
     fontWeight: '700',
     color: 'black',
-    marginVertical: vs(20),
+    marginVertical: vs(8),
   },
 });
 

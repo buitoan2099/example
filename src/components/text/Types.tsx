@@ -5,8 +5,9 @@ import type {
   StyleProp,
   ViewProps,
   ColorValue,
+  Falsy,
 } from 'react-native';
-import {BaseProps, TouchableProps} from 'src/commons/types';
+import {BaseProps, TouchableProps, TransferData} from 'src/commons/types';
 
 export type TextProps = RNTextProps &
   BaseProps & {
@@ -71,4 +72,23 @@ export const FontWeight = {
   '900': 'Black',
   bold: 'Bold',
   normal: 'Regular',
+};
+
+export type HighlightTextProps = BaseProps & {
+  text: string;
+  textStyle?: TextProps;
+  keysearch: string;
+  highlightStyle?: TextProps;
+  highlightColor?: ColorValue;
+  onPressHightLight?: (
+    data?: TransferData,
+  ) => void | Promise<void> | RegExp | Falsy;
+};
+
+export type textFormProps = {
+  text: string;
+  style?: TextProps;
+  isHighlight?: boolean;
+  highlightColor?: ColorValue;
+  onPress?: (data?: TransferData) => void | Promise<void> | RegExp | Falsy;
 };

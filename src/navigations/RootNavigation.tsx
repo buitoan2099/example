@@ -11,7 +11,7 @@ export const RootNavigation = () => {
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         screenOptions={StackOption}
-        initialRouteName={SCREENS.FIRST.name}>
+        initialRouteName={SCREENS.SECOND.name}>
         <Stack.Screen
           name={SCREENS.FIRST.name}
           component={SCREENS.FIRST.component}
