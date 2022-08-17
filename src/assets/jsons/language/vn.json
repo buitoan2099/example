@@ -1,0 +1,10 @@
+{
+  "button": {
+    "cancel": "Cancel",
+    "choose": "Choose",
+    "back_to_login": "Perform Login",
+    "next": "Next",
+    "start": "Start",
+    "check": "Check"
+  }
+}
