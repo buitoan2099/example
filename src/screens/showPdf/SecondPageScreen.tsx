@@ -25,45 +25,14 @@ export const SecondScreen = () => {
       <>
         <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text>
         <HighlightText
-          text={'anh em ba 4 h anh em fki em'}
-          keysearch={'em'}
+          text={
+            'anh êm ba fffffffffffffffffffffffffffffffffffffffffffffffffff 4 h anh em fki êm'
+          }
+          keysearch={'êm '}
           highlightColor={color.red}
           textStyle={styles.titleStyle}
           highlightStyle={styles.titleHighlightStyle}
         />
-        {/* <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text> */}
-        {/* <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text>
-        <View style={stylesSheet.containerView}>
-          <RowTextView
-            title={'water_bill.bill_number'}
-            value={viewModel.billNumber[0]}
-            styleTitle={{color: color.white}}
-            styleValue={stylesSheet.valueStyle}
-          />
-          <RowTextView
-            title={''}
-            value={viewModel.billNumber[1]}
-            styleValue={stylesSheet.valueStyle}
-            style={{
-              paddingTop: vs(0),
-            }}
-          />
-          <RowTextView
-            title={'title.period'}
-            value={viewModel.period}
-            styleTitle={{color: color.white}}
-            styleValue={stylesSheet.valueStyle}
-          />
-          <RowTextView
-            title={'mytel_packs.amount_kyats'}
-            value={viewModel.amount}
-            styleTitle={{color: color.white}}
-            styleValue={stylesSheet.valueStyle}
-            style={{
-              paddingBottom: dimension.padding3,
-            }}
-          />
-        </View> */}
       </>
     );
   };
@@ -100,7 +69,7 @@ const styles = StyleSheet.create({
     marginVertical: vs(8),
   },
   titleHighlightStyle: {
-    fontSize: vs(16),
+    fontSize: vs(18),
     fontWeight: '700',
     color: 'black',
     marginVertical: vs(8),

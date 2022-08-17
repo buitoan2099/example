@@ -55,7 +55,8 @@ export default function HighlightTextM(props: HighlightTextProps) {
             key={index.toString()}
             onPress={handleOnHightlightPress}
             style={{
-              ...(hightlightTextStyle ?? textStyle),
+              ...textStyle,
+              ...hightlightTextStyle,
               color: props.highlightColor,
             }}>
             {val.text}
