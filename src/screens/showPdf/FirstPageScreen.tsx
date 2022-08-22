@@ -2,6 +2,7 @@ import {BaseScreen} from '@components/BaseScreen';
 import ButtonTitle from '@components/button/ButtonTitle';
 import Text from '@components/text/Text';
 import {navigateToSecond} from '@navigations';
+import {vs} from '@utils';
 import {Observer} from 'mobx-react-lite';
 import React, {memo, useEffect, useState} from 'react';
 import {
@@ -12,7 +13,6 @@ import {
   View,
 } from 'react-native';
 import Pdf from 'react-native-pdf';
-import {vs} from 'src/commons/types';
 import {ShowPdfViewModel} from './showPdfVM';
 
 export const FirstScreen = () => {

@@ -5,8 +5,8 @@ import ButtonView from './ButtonView';
 import {useColor, useStyleSheet} from '@hooks';
 import {ColorType, DimensionType} from '@commons';
 import Text from '@components/text/Text';
-import {vs} from 'src/commons/types';
 import {Theme} from '@components/theme/Types';
+import {vs} from '@utils';
 
 export interface ButtonTitleProps extends ButtonProps {
   isOutline?: boolean;

@@ -1,9 +1,9 @@
 import {ColorType, DimensionType} from '@commons';
 import {Theme} from '@components/theme/Types';
 import {useColor, useStyleSheet} from '@hooks';
+import {vs} from '@utils';
 import React from 'react';
 import {ColorValue, StyleSheet, ViewStyle} from 'react-native';
-import {vs} from 'src/commons/types';
 import {Button} from './Button';
 import {ButtonViewProps} from './Type';
 

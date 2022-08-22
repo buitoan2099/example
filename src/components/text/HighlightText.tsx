@@ -3,6 +3,7 @@ import {useTranslation} from '@hooks';
 import {TransParam} from 'src/commons/types';
 import {Text} from './Text';
 import {HighlightTextProps, textFormProps, TextProps} from './Types';
+import {removeVietNameseCharLowCase} from '@utils/AppUtils';
 
 export default function HighlightTextM(props: HighlightTextProps) {
   if (props.isHide) {
@@ -25,23 +26,25 @@ export default function HighlightTextM(props: HighlightTextProps) {
   const getValue = () => {
     let result = [] as textFormProps[];
     let data = translation(title);
-    let key = translation(keysearch);
+    let dataCheck = translation(removeVietNameseCharLowCase(title));
+    let key = translation(removeVietNameseCharLowCase(keysearch));
     let i = 0;
-    while (i < data.length) {
-      let pos = data.indexOf(key);
+    while (i < dataCheck.length) {
+      let pos = dataCheck.indexOf(key);
       if (pos > -1) {
         result = [...result, {text: data.substring(i, pos)}];
         result = [
           ...result,
           {
-            text: key,
+            text: data.substring(pos, pos + key.length),
             isHighlight: true,
           },
         ];
         data = data.substring(pos + key.length, data.length);
+        dataCheck = dataCheck.substring(pos + key.length, dataCheck.length);
       } else {
         result = [...result, {text: data.substring(i, data.length)}];
-        i = data.length;
+        i = dataCheck.length;
       }
     }
     return result;

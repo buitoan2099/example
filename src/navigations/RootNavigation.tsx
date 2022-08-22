@@ -3,6 +3,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {SCREENS} from './ScreensRouter';
 import {navigationRef, StackOption} from './NavigationHelper';
+import {BottomSheet} from '@components/bottomSheet';
+import {LoadingModal} from '@components/loading';
+import {PopupModal} from '@components/popupModal';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +24,9 @@ export const RootNavigation = () => {
           component={SCREENS.SECOND.component}
         />
       </Stack.Navigator>
+      <PopupModal />
+      <BottomSheet />
+      <LoadingModal />
     </NavigationContainer>
   );
 };

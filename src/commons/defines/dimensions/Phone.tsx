@@ -1,4 +1,4 @@
-import {vs} from 'src/commons/types';
+import {vs} from '@utils';
 import {DimensionType} from './DimensionType';
 export const PhoneDimension: DimensionType = {
   margin: vs(8),

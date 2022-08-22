@@ -7,6 +7,7 @@ import {
   StackNavigationOptions,
   TransitionPresets,
 } from '@react-navigation/stack';
+import {DeviceUtils} from '@utils';
 
 export const StackOption: StackNavigationOptions = {
   headerShown: false,
@@ -16,7 +17,7 @@ export const StackOption: StackNavigationOptions = {
 export const navigationRef = createNavigationContainerRef();
 
 export function getNavigation(hideKeyboard?: boolean) {
-  // hideKeyboard && DeviceUtils?.dismissKeyboard();
+  hideKeyboard && DeviceUtils?.dismissKeyboard();
   return navigationRef;
 }
 

@@ -4,11 +4,12 @@ import {StyleSheet, View} from 'react-native';
 import Text from '@components/text/Text';
 import {BaseScreen} from '@components/BaseScreen';
 import ButtonTitle from '@components/button/ButtonTitle';
-import {vs} from 'src/commons/types';
 import createStyles from './styles';
 import {useColor, useDimension, useStyleSheet} from '@hooks';
 import {ColorType, DimensionType} from '@commons';
 import {HighlightText} from '@components/text/HighlightText';
+import {TextInput} from '@components/textInput/TextInput';
+import {vs} from '@utils';
 
 export const SecondScreen = () => {
   //   const viewModel = FirstViewModel.current;
@@ -26,12 +27,20 @@ export const SecondScreen = () => {
         <Text style={styles.titleStyle}>{'title.choose_to_pay'}</Text>
         <HighlightText
           text={
-            'anh êm ba fffffffffffffffffffffffffffffffffffffffffffffffffff 4 h anh em fki êm'
+            'anh ếm ba fffffffffffffffffffffffffffffffffffffffffffffffffff 4 h anh ẹm fki em'
           }
           keysearch={'êm '}
           highlightColor={color.red}
           textStyle={styles.titleStyle}
           highlightStyle={styles.titleHighlightStyle}
+        />
+        <TextInput
+          isBottomOutline
+          secureTextEntrys
+          isShowClear
+          warning={'ddddđ'}
+          isWarning={true}
+          label={'dfffdsgfg'}
         />
       </>
     );

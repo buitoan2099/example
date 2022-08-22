@@ -1,7 +1,7 @@
+import {vs} from '@utils';
 import {StyleSheet} from 'react-native';
 import {ColorType} from '../../commons/defines/colors/ColorType';
 import {DimensionType} from '../../commons/defines/dimensions';
-import {vs} from '../../commons/types';
 import {Theme} from '../../components/theme/Types';
 
 const createStyles = (theme: Theme) => {

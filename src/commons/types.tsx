@@ -28,11 +28,6 @@ export declare type DimensionKey =
       [key: string]: any;
     };
 
-//Datatypes
-export const vs = (size: number) => {
-  return size;
-};
-
 //Base props
 export declare type BaseData<I = unknown, D = unknown> = {
   id?: string | number | object | Record<string, unknown> | I;

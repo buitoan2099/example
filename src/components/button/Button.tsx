@@ -2,8 +2,8 @@ import React, {isValidElement} from 'react';
 import {StyleProp, StyleSheet, TextStyle, ViewStyle} from 'react-native';
 import type {ButtonProps} from './Type';
 import Text from '@components/text/Text';
-import {vs} from 'src/commons/types';
 import {Touchable} from '@components/Touchable';
+import {vs} from '@utils';
 export const Button = (props: ButtonProps) => {
   if (props.isHide) {
     return null;

@@ -6,5 +6,8 @@
     "next": "Next",
     "start": "Start",
     "check": "Check"
+  },
+  "unit": {
+    "please_wait": "Vui lòng chờ..."
   }
 }

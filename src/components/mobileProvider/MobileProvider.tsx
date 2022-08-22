@@ -7,6 +7,7 @@ import {
 } from 'react-native-safe-area-context';
 import {ProviderProps} from './Types';
 import {ThemeProvider} from '@components/theme/ThemeProvider';
+import {DeviceUtils} from '@utils';
 
 export const MobileProvider = (props: ProviderProps) => {
   const {children, i18next, theme, backgroundColor = 'white'} = props;
@@ -27,13 +28,15 @@ export const MobileProvider = (props: ProviderProps) => {
             //   colorScheme === ('light' || true) ? 'dark' : 'light'
             // }-content`}
           />
-          {/* <View
-            style={{ flexGrow: 1 }}
-            onStartShouldSetResponder={DeviceUtils.dismissKeyboard}
-          >
+          <View
+            style={{flexGrow: 1}}
+            onStartShouldSetResponder={() => {
+              DeviceUtils.dismissKeyboard();
+              return false;
+            }}>
             <Fragment>{children}</Fragment>
-          </View> */}
-          <Fragment>{children}</Fragment>
+          </View>
+          {/* <Fragment>{children}</Fragment> */}
         </SafeAreaProvider>
       </I18nextProvider>
     </ThemeProvider>

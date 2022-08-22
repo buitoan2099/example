@@ -7,8 +7,8 @@ import {ColorType, DimensionType} from '@commons';
 import {IconsSvg} from '@assets/icons/IconsSvg';
 import Text from '@components/text/Text';
 import {SvgView} from '@components/svg/SvgView';
-import {vs} from 'src/commons/types';
 import {Theme} from '@components/theme/Types';
+import {vs} from '@utils';
 
 export default function HeaderView(props: HeaderProps) {
   if (props.isHide) {
